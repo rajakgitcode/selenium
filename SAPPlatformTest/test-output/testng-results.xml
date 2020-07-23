@@ -2,42 +2,53 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[=====Browser Session Started=====]]>
+      <![CDATA[*****Browser Session Started*****]]>
     </line>
     <line>
-      <![CDATA[=====Application Started=====]]>
+      <![CDATA[*****Application Started*****]]>
     </line>
     <line>
-      <![CDATA[=====Browser Session Ended=====]]>
+      <![CDATA[*****Browser Session Ended*****]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28447" started-at="2020-07-22T14:01:45 IST" finished-at="2020-07-22T14:02:13 IST">
+  <suite name="Suite" duration-ms="23055" started-at="2020-07-24T00:40:04 IST" finished-at="2020-07-24T00:40:27 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28447" started-at="2020-07-22T14:01:45 IST" finished-at="2020-07-22T14:02:13 IST">
+    <test name="Test" duration-ms="23055" started-at="2020-07-24T00:40:04 IST" finished-at="2020-07-24T00:40:27 IST">
       <class name="Test.Platform_Sign_Up">
-        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@43814d18]" name="initiateBrowser" is-config="true" duration-ms="16943" started-at="2020-07-22T14:01:45 IST" finished-at="2020-07-22T14:02:02 IST">
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@79be0360]" name="initiateBrowser" is-config="true" duration-ms="8873" started-at="2020-07-24T00:40:04 IST" finished-at="2020-07-24T00:40:13 IST">
           <reporter-output>
             <line>
-              <![CDATA[=====Browser Session Started=====]]>
+              <![CDATA[*****Browser Session Started*****]]>
             </line>
             <line>
-              <![CDATA[=====Application Started=====]]>
+              <![CDATA[*****Application Started*****]]>
             </line>
           </reporter-output>
         </test-method> <!-- initiateBrowser -->
-        <test-method status="PASS" signature="testSignUp()[pri:0, instance:Test.Platform_Sign_Up@43814d18]" name="testSignUp" duration-ms="8753" started-at="2020-07-22T14:02:02 IST" finished-at="2020-07-22T14:02:10 IST">
+        <test-method status="PASS" signature="test_Platform_Sign_Up()[pri:0, instance:Test.Platform_Sign_Up@79be0360]" name="test_Platform_Sign_Up" duration-ms="8436" started-at="2020-07-24T00:40:13 IST" finished-at="2020-07-24T00:40:21 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSignUp -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@43814d18]" name="quitBrowser" is-config="true" duration-ms="2647" started-at="2020-07-22T14:02:10 IST" finished-at="2020-07-22T14:02:13 IST">
+        </test-method> <!-- test_Platform_Sign_Up -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@79be0360]" name="captureScreen" is-config="true" duration-ms="4" started-at="2020-07-24T00:40:21 IST" finished-at="2020-07-24T00:40:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_Platform_Sign_Up status=SUCCESS method=Platform_Sign_Up.test_Platform_Sign_Up()[pri:0, instance:Test.Platform_Sign_Up@79be0360] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@79be0360]" name="quitBrowser" is-config="true" duration-ms="5531" started-at="2020-07-24T00:40:21 IST" finished-at="2020-07-24T00:40:27 IST">
           <reporter-output>
             <line>
-              <![CDATA[=====Browser Session Ended=====]]>
+              <![CDATA[*****Browser Session Ended*****]]>
             </line>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- Test.Platform_Sign_Up -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

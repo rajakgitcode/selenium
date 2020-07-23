@@ -6,6 +6,7 @@
       <class name="Test.Platform_Sign_Up">
         <methods>
           <include name="initiateBrowser"/>
+          <include name="captureScreen"/>
           <include name="quitBrowser"/>
           <include name="testSignUp"/>
         </methods>

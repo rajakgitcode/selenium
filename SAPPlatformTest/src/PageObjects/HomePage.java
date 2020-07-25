@@ -24,6 +24,7 @@ public class HomePage extends TestBase {
 	WebElement signUpButton;
 	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/iframe[1]")
 	WebElement iFrame;
+	
 
 	public String getPageTitle() {
 		return driver.getTitle();
@@ -43,5 +44,8 @@ public class HomePage extends TestBase {
 	public void switchToIframe() {
 		iFrame = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(iFrame));
 		driver.switchTo().frame(0);
+		
 	}
+
+	
 }

@@ -5,10 +5,10 @@
     <classes>
       <class name="Test.Platform_Sign_Up">
         <methods>
+          <include name="test_Registration_LabelText_Matching"/>
           <include name="initiateBrowser"/>
           <include name="captureScreen"/>
           <include name="quitBrowser"/>
-          <include name="testSignUp"/>
         </methods>
       </class> <!-- Test.Platform_Sign_Up -->
     </classes>

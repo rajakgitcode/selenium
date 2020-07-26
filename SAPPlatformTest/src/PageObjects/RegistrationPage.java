@@ -9,7 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import Test.TestBase;
+import Utility.Propertie;
 
+/*
+ * This class has a Objects and methods to interact with Registartion Form.
+ */
 public class RegistrationPage extends TestBase {
 
 	WebDriver driver;
@@ -88,172 +92,172 @@ public class RegistrationPage extends TestBase {
 	}
 
 	public void enterFirstName(String str) {
-		firstName = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(firstName));
+		firstName = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(firstName));
 		firstName.clear();
 		firstName.sendKeys(str);
 	}
 
 	public void enterLastName(String str) {
-		lastName = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(lastName));
+		lastName = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(lastName));
 		lastName.clear();
 		lastName.sendKeys(str);
 	}
 
 	public void enterMail(String str) {
-		mail = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(mail));
+		mail = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(mail));
 		mail.clear();
 		mail.sendKeys(str);
 	}
 
 	public void enterNewPassword(String str) {
-		newPassword = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(newPassword));
+		newPassword = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(newPassword));
 		newPassword.clear();
 		newPassword.sendKeys(str);
 	}
 
 	public void enterRetypePassword(String str) {
-		retypePassword = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(retypePassword));
+		retypePassword = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(retypePassword));
 		retypePassword.clear();
 		retypePassword.sendKeys(str);
 	}
 
 	public void clickOnPDAccept() {
-		pdAccept = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(pdAccept));
+		pdAccept = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(pdAccept));
 		pdAccept.click();
 	}
 
 	public void clickOnTouAccept() {
-		touAccept = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(touAccept));
+		touAccept = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(touAccept));
 		touAccept.click();
 	}
 
 	public void clickOnRegisterButton() {
-		registerButton = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(registerButton));
+		registerButton = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(registerButton));
 		registerButton.click();
 	}
 	
 	public void clickOnCloseButton() {
-		closeButton = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(closeButton));
+		closeButton = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(closeButton));
 		closeButton.click();
 	}
 
 	public void verifyRegistrationTitle()
 	{
-		registrationTitle = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(registrationTitle));
+		registrationTitle = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(registrationTitle));
 		softAssert.assertEquals(registrationTitle.getText(), "Registration", "Registration Title is NOT matching");
 	}
 	
 	public void verifyTellUsAboutYourselfTitle()
 	{
-		tellUsAboutYourselfTitle = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(tellUsAboutYourselfTitle));
+		tellUsAboutYourselfTitle = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(tellUsAboutYourselfTitle));
 		softAssert.assertEquals(tellUsAboutYourselfTitle.getText(), "Tell Us About Yourself", "Tell Us About Yourself Title is NOT matching");
 	}
 	
 	public void verifyPasswordTitle()
 	{
-		setPasswordTitle = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(setPasswordTitle));
+		setPasswordTitle = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(setPasswordTitle));
 		softAssert.assertEquals(setPasswordTitle.getText(), "Set Password", "Set Password Title is NOT matching");
 	}
 	
 	public void verifyTermsAndConditionsTitle()
 	{
-		termsAndConditionsTitle = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(termsAndConditionsTitle));
+		termsAndConditionsTitle = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(termsAndConditionsTitle));
 		softAssert.assertEquals(termsAndConditionsTitle.getText(), "Terms and Conditions", "Terms and Conditions Title is NOT matching");
 	}
 	
 	public void verifyFirstNameLabel()
 	{
-		firstNameLabel = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(firstNameLabel));
+		firstNameLabel = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(firstNameLabel));
 		softAssert.assertEquals(firstNameLabel.getText(), "First Name", "First Name label is NOT matching");
 	}
 	
 	public void verifyLastNameLabel()
 	{
-		lastNameLabel = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(lastNameLabel));
+		lastNameLabel = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(lastNameLabel));
 		softAssert.assertEquals(lastNameLabel.getText(), "Last Name", "Last Name label is NOT matching");
 	}
 	
 	public void verifyEmailLabel()
 	{
-		emailLabel = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(emailLabel));
+		emailLabel = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(emailLabel));
 		softAssert.assertEquals(emailLabel.getText(), "E-Mail", "E-Mail label is NOT matching");
 	}
 	
 	public void verifyPasswordLabel()
 	{
-		passwordLabel = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(passwordLabel));
+		passwordLabel = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(passwordLabel));
 		softAssert.assertEquals(passwordLabel.getText(), "Password", "Password label is NOT matching");
 	}
 	
 	public void verifyRetypePasswordLabel()
 	{
-		retypeLabel = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(retypeLabel));
+		retypeLabel = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(retypeLabel));
 		softAssert.assertEquals(retypeLabel.getText(), "Re-Enter Password", "Re-Enter Password label is NOT matching");
 	}
 	
 	public void verifyTermsLabel1()
 	{
-		termsLabel1 = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(termsLabel1));
+		termsLabel1 = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(termsLabel1));
 		softAssert.assertEquals(termsLabel1.getText(), "I have read the Privacy Statement and consent to this agreement.", "Terms label1 is NOT matching");
 	}
 	
 	public void verifyTermsLabel2()
 	{
-		termsLabel2 = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(termsLabel2));
+		termsLabel2 = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(termsLabel2));
 		softAssert.assertEquals(termsLabel2.getText(), "I have read and understood the Terms and Conditions of SAP Conversational AI.", "Terms label2 is NOT matching");
 	}
 	
 	public void verifyRequiredLabel()
 	{
-		requiredLabel = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(requiredLabel));
+		requiredLabel = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(requiredLabel));
 		softAssert.assertEquals(requiredLabel.getText(), "Required", "Required Label is NOT matching");
 	}
 	
 	public void verifyLogoImage()
 	{
-		logoImgBottom = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(logoImgBottom));
+		logoImgBottom = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(logoImgBottom));
 		softAssert.assertTrue(logoImgBottom.isDisplayed(), "Logo at the Bottom is NOT displayed");
 	}
 	
 	public void verifyFirstNameError()
 	{
-		firstNameError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(firstNameError));
+		firstNameError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(firstNameError));
 		softAssert.assertEquals(firstNameError.getText(), "Required field", "First Name Error is NOT matching");
 	}
 	
 	public void verifyLastNameError()
 	{
-		lastNameError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(lastNameError));
+		lastNameError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(lastNameError));
 		softAssert.assertEquals(lastNameError.getText(), "Required field", "Last Name Error is NOT matching");
 	}
 	
 	public void verifyEmailError()
 	{
-		emailError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(emailError));
+		emailError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(emailError));
 		softAssert.assertEquals(emailError.getText(), "Required field", "Email Error is NOT matching");
 	}
 	
 	public void verifyPDAcceptError()
 	{
-		pdAcceptError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(pdAcceptError));
+		pdAcceptError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(pdAcceptError));
 		softAssert.assertEquals(pdAcceptError.getText(), "To accept the privacy statement, click the box above", "PD Accept Error is NOT matching");
 	}
 	
 	public void verifyToutAcceptError()
 	{
-		toutAcceptError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(toutAcceptError));
+		toutAcceptError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(toutAcceptError));
 		softAssert.assertEquals(toutAcceptError.getText(), "To accept the terms of use, check the box", "Tout Accept Error is NOT matching");
 	}
 	
 	public void verifyPasswordError()
 	{
-		passwordError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(passwordError));
+		passwordError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(passwordError));
 		softAssert.assertEquals(passwordError.getText(), "The password must comply with the requirements", "Password Error is NOT matching");
 	}
 	
 	public void verifyReEnterPasswordError()
 	{
-		retypeError = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(retypeError));
+		retypeError = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(retypeError));
 		softAssert.assertEquals(retypeError.getText(), "Required field", "Reenter Password Error is NOT matching");
 	}
 	

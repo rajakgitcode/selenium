@@ -10,7 +10,11 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import Test.TestBase;
+import Utility.Propertie;
 
+/*
+ * This page class has a UI Objects and methods to interact with Confirmation Page of registering user.
+ */
 public class ConfirmationPage extends TestBase {
 
 	WebDriver driver;
@@ -33,30 +37,30 @@ public class ConfirmationPage extends TestBase {
 	WebElement logoImgBottom;
 	
 	public String getSuccessMessage() {
-		successMessageText = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(successMessageText));
+		successMessageText = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(successMessageText));
 		return successMessageText.getText();
 	}
 
 	public String getConfirmationMail() {
-		confirmationMailText = new WebDriverWait(driver, 20)
+		confirmationMailText = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(confirmationMailText));
 		return confirmationMailText.getText();
 	}
 	
 	public String getActivateText() {
-		confirmationMailText = new WebDriverWait(driver, 20)
+		confirmationMailText = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(activateText));
 		return activateText.getText();
 	}
 
 	public void verifySuccessMessage() {
-		successMessageText = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(successMessageText));
+		successMessageText = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(successMessageText));
 		softAssert.assertEquals(successMessageText.getText(), "Thank you for registering with SAP Conversational AI",
 				"Success Message Text Not Matching");
 	}
 
 	public void verifyConfirmationMailMessage() {
-		confirmationMailText = new WebDriverWait(driver, 20)
+		confirmationMailText = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(confirmationMailText));
 		softAssert.assertTrue(
 				getConfirmationMail().contains("An e-mail with a link to activate your account has been sent to"),
@@ -64,20 +68,20 @@ public class ConfirmationPage extends TestBase {
 	}
 	
 	public void verifyActivationText() {
-		activateText = new WebDriverWait(driver, 20)
+		activateText = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(activateText));
 		softAssert.assertEquals(activateText.getText(), "To activate your account, click the link contained in the e-mail. Note that it might take a few minutes for the e-mail to reach your inbox.","Activate Text NOT matching");
 	}
 	
 	public void verifyLogoImage() {
-		logoImgBottom = new WebDriverWait(driver, 20)
+		logoImgBottom = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(logoImgBottom));
 		softAssert.assertTrue(logoImgBottom.isDisplayed(), "Logo Image is missing in Bottom of confirmation Page" );
 	}
 	
 	public void clickOnCloseButton()
 	{
-		closeButton = new WebDriverWait(driver, 20)
+		closeButton = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.elementToBeClickable(closeButton));
 		closeButton.click();
 	}

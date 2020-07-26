@@ -17,6 +17,9 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/*
+ * This Excel Utility class has a methods to read excel, write excel data.
+ */
 public class ExcelUtil 
 {
 	Workbook workbook;

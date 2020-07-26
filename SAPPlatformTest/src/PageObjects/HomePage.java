@@ -9,6 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
 
 import Test.TestBase;
+import Utility.Propertie;
+
+/*
+ * This page class has a UI Objects and methods to interact with Home page.
+ */
 
 @Listeners(Utility.ExtentTestNGITestListener.class)
 public class HomePage extends TestBase {
@@ -31,19 +36,21 @@ public class HomePage extends TestBase {
 	}
 
 	public void clickOnCookieOKButton() {
-		cookieOKButton = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(cookieOKButton));
+		cookieOKButton = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(cookieOKButton));
 		cookieOKButton.click();
 
 	}
 
 	public void clickOnSignUpButton() {
-		signUpButton = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(signUpButton));
+		signUpButton = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(signUpButton));
 		signUpButton.click();
 	}
 
 	public void switchToIframe() {
-		iFrame = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(iFrame));
+		
+		iFrame = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(iFrame));
 		driver.switchTo().frame(0);
+		
 		
 	}
 

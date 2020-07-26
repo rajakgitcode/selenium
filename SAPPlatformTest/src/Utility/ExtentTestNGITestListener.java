@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.Cookie;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -20,10 +21,14 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import Test.TestBase;
 
+/*
+ * This Listener class has a methods to Listen the test event, report, log the test results based on the test results.
+ */
 public class ExtentTestNGITestListener extends TestListenerAdapter {
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports report;
 	public static ExtentTest logger;
+	public static Cookie cookie;
 
 	@Override
 	public synchronized void onStart(ITestContext context) {
@@ -64,13 +69,18 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	public synchronized void onTestSuccess(ITestResult testResult) {
 		logger = report.createTest(testResult.getName()); // create new entry in the report
 		logger.log(Status.PASS, MarkupHelper.createLabel(testResult.getName(), ExtentColor.GREEN)); 
+		
+		cookie = new Cookie("zaleniumTestPassed", "true"); //sets test in zalenium dashboard as pass
+		    
 	}
 
 	@Override
 	public synchronized void onTestFailure(ITestResult testResult) {
 		logger = report.createTest(testResult.getName()); // create new entry in the report
 		logger.log(Status.FAIL, MarkupHelper.createLabel(testResult.getName(), ExtentColor.RED)); 
-
+		
+		cookie = new Cookie("zaleniumTestPassed", "false"); //sets test in zalenium dashboard as fail
+		
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
 
 		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + testResult.getName() + "_"

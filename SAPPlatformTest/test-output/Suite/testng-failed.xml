@@ -9,7 +9,11 @@
       <class name="Test.Platform_Sign_Up">
         <methods>
           <include name="test_Registration_LabelText_Matching"/>
+          <include name="test_Platform_Sign_Up_With_Excel_Reader"/>
           <include name="initiateBrowser"/>
+          <include name="test_Platform_Sign_Up"/>
+          <include name="test_Registartion_Error_Messages"/>
+          <include name="manageCookie"/>
           <include name="captureScreen"/>
           <include name="quitBrowser"/>
         </methods>

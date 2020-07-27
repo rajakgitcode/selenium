@@ -23,50 +23,75 @@ public class Platform_Sign_Up extends TestBase
 {
 	SoftAssert softAssert = new SoftAssert();
 
-	@Test(dataProvider = "data-provider-Test-Platform-SignUp", dataProviderClass = TestDataProvider.class, groups = {"functional"}, retryAnalyzer = RetryTest.class, description = "testing Platform sign up with Excel Reader", enabled = true)
+	//Reads SignUp Form data from the excel and perform the test based on it
+	@Test(dataProvider = "data-provider-Test-Platform-SignUp", dataProviderClass = TestDataProvider.class, groups = {"functional"}, retryAnalyzer = RetryTest.class, description = "Test 1 - Testing Platform sign up with Excel Reader", enabled = true)
 	public void test_Platform_Sign_Up(String firstName, String lastName, String email, String password, String retypePasswd, String opAuth, String toutAuth) throws InterruptedException 
 	{
 		System.out.println("*****Test Started - test_Platform_Sign_Up_With_Excel_Reader*****");
 		
 		HomePage homePage = new HomePage(driver);
 		
-		homePage.clickOnCookieOKButton();
-		homePage.clickOnSignUpButton();
-		homePage.switchToIframe();
+		homePage.clickOnCookieOKButton(); //Click on OK button in cookie
+		homePage.clickOnSignUpButton(); //Click SignUp button
+		homePage.switchToIframe();		//Switch to Registration Form
 			
 		RegistrationPage registrationPage = new RegistrationPage(driver);
 		
-		registrationPage.enterFirstName(firstName);
+		registrationPage.enterFirstName(firstName); //Enter First Name
 		Thread.sleep(300);
-		registrationPage.enterLastName(lastName);
+		registrationPage.enterLastName(lastName); // Enter Last Name
 		Thread.sleep(300);
-		registrationPage.enterMail(email);
+		registrationPage.enterMail(email);  //Enter Email
 		Thread.sleep(300);
-		registrationPage.enterNewPassword(password);
+		registrationPage.enterNewPassword(password); //Enter Password
 		Thread.sleep(300);
-		registrationPage.enterRetypePassword(retypePasswd);
+		registrationPage.enterRetypePassword(retypePasswd); //ReEnter Password
 		Thread.sleep(300);
 			
-		registrationPage.registerButton.sendKeys(Keys.DOWN);
-		
+		registrationPage.registerButton.sendKeys(Keys.DOWN); //Focus to Register button
 		Thread.sleep(500);
-		registrationPage.clickOnPDAccept();
-		registrationPage.clickOnTouAccept();
-		registrationPage.clickOnRegisterButton();
-			
-		ConfirmationPage confirmationpage = new ConfirmationPage(driver);
-			
-		confirmationpage.verifySuccessMessage();
-		confirmationpage.verifyConfirmationMailMessage();
-		confirmationpage.verifyActivationText();
-		confirmationpage.verifyLogoImage();
-		confirmationpage.clickOnCloseButton();
 		
+		if(opAuth.equalsIgnoreCase("Yes"))
+		{
+			registrationPage.clickOnPDAccept(); //Click on PDAccept
+		}
+		
+		if(toutAuth.equalsIgnoreCase("Yes"))
+		{
+			registrationPage.clickOnTouAccept(); //Click on ToutAccept
+		}
+		
+		registrationPage.clickOnRegisterButton(); //Click on Register Button
+		
+		if(opAuth.equalsIgnoreCase("Yes") && toutAuth.equalsIgnoreCase("Yes"))
+		{
+			ConfirmationPage confirmationpage = new ConfirmationPage(driver); //View confirmation Page
+				
+			confirmationpage.verifySuccessMessage(); //Verify success message on confirmation
+			confirmationpage.verifyConfirmationMailMessage(); //Verify mail text on confirmation
+			confirmationpage.verifyActivationText(); //Verify activation text on confirmation
+			confirmationpage.verifyLogoImage();  //Verify log image on confirmation
+			confirmationpage.clickOnCloseButton(); //Click on close button to close confirmation window
+		}
+		else
+		{
+			if(opAuth.equalsIgnoreCase("No"))
+			{
+				registrationPage.verifyPDAcceptError();  //Verify PDAccept Error message
+			}
+			
+			if(toutAuth.equalsIgnoreCase("No"))
+			{ 
+				registrationPage.verifyToutAcceptError(); //Verify ToutAccept Error message
+			} 
+		}
+			
 		driver.switchTo().defaultContent();
 		softAssert.assertAll();
 	}
 	
-	@Test(groups = {"Acceptance"}, retryAnalyzer = RetryTest.class, description = "testing the Registration form label names/elements presents", enabled = true)
+	//Verify the Label Name displayed on the SignUp page
+	@Test(groups = {"Acceptance"}, retryAnalyzer = RetryTest.class, description = "Test 2 - Testing the Registration form label names/elements presents", enabled = false)
 	public void test_Registration_Form_LabelText() throws InterruptedException
 	{
 		System.out.println("*****Test Started - test_Registration_LabelText_Matching*****");
@@ -103,7 +128,8 @@ public class Platform_Sign_Up extends TestBase
 		
 	}
 	
-	@Test(groups = {"Negative"}, retryAnalyzer = RetryTest.class, description = "Testing the Registration Form Error Messages", enabled = false)
+	//Verify the Error Message displayed on the SignUp page
+	@Test(groups = {"Negative"}, retryAnalyzer = RetryTest.class, description = "Test3 - Testing the Registration Form Error Messages", enabled = false)
 	public void test_registration_Form_Error_Messages() throws InterruptedException
 	{
 		System.out.println("*****Test Started - test_Registration_ErrorText_Matching*****");

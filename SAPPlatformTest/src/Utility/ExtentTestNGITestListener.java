@@ -29,9 +29,11 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	public static ExtentReports report;
 	public static ExtentTest logger;
 	public static Cookie cookie;
+	ExcelUtil excel;
 
 	@Override
-	public synchronized void onStart(ITestContext context) {
+	public synchronized void onStart(ITestContext context) 
+	{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); // time stamp
 
 		htmlReporter = new ExtentHtmlReporter(
@@ -54,28 +56,34 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	}
 
 	@Override
-	public synchronized void onFinish(ITestContext context) {
+	public synchronized void onFinish(ITestContext context) 
+	{
 		report.flush();
 	}
 
 	@Override
-	public synchronized void onTestStart(ITestResult testResult) {
+	public synchronized void onTestStart(ITestResult testResult) 
+	{
 		// report.createTest(testResult.getName());
 		// logger.info("****Test Started****" + testResult.getName());
 
 	}
 
 	@Override
-	public synchronized void onTestSuccess(ITestResult testResult) {
+	public synchronized void onTestSuccess(ITestResult testResult) 
+	{
 		logger = report.createTest(testResult.getName()); // create new entry in the report
 		logger.log(Status.PASS, MarkupHelper.createLabel(testResult.getName(), ExtentColor.GREEN)); 
 		
 		cookie = new Cookie("zaleniumTestPassed", "true"); //sets test in zalenium dashboard as pass
+		
+		//excel.setCellData("PASS", rowNum, colNum);
 		    
 	}
 
 	@Override
-	public synchronized void onTestFailure(ITestResult testResult) {
+	public synchronized void onTestFailure(ITestResult testResult) 
+	{
 		logger = report.createTest(testResult.getName()); // create new entry in the report
 		logger.log(Status.FAIL, MarkupHelper.createLabel(testResult.getName(), ExtentColor.RED)); 
 		
@@ -96,13 +104,11 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	}
 
 	@Override
-	public synchronized void onTestSkipped(ITestResult testResult) {
+	public synchronized void onTestSkipped(ITestResult testResult) 
+	{
 		logger = report.createTest(testResult.getName()); // create new entry in the report
 		logger.log(Status.SKIP, MarkupHelper.createLabel(testResult.getName(), ExtentColor.ORANGE)); 
 	}
 
-	@Override
-	public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-
-	}
+	
 }

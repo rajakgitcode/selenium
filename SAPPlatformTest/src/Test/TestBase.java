@@ -59,8 +59,8 @@ public class TestBase {
 		capabilities.setCapability("build", "TestBuild");
 		
 		
-		driver = new RemoteWebDriver(new URL(Propertie.remoteWebDriverURL), capabilities);
-		//driver = new ChromeDriver();
+		//driver = new RemoteWebDriver(new URL(Propertie.remoteWebDriverURL), capabilities);
+		driver = new ChromeDriver();
 		//driver = new FirefoxDriver();
 		Reporter.log("*****Browser Session Started*****", true);
 		
@@ -71,7 +71,7 @@ public class TestBase {
 		
 		Reporter.log("*****Application Started*****", true);
 	}
-
+	
 	@AfterMethod
 	public void captureScreen(ITestResult result) throws IOException 
 	{

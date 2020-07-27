@@ -1,11 +1,8 @@
 package Test;
 
-import org.testng.annotations.AfterClass;
+
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 
 import Utility.ExtentTestNGITestListener;
@@ -47,8 +44,8 @@ public class TestBase {
 	@BeforeMethod
 	public void initiateBrowser() throws MalformedURLException 
 	{
-		System.setProperty("webdriver.chrome.driver", "/Users/rajak/Documents/Selenium/chromedriver");
-		System.setProperty("webdriver.gecko.driver", "/Users/rajak/Documents/Selenium/geckodriver");
+		System.setProperty("webdriver.chrome.driver", Propertie.chromeDriverPath);
+		System.setProperty("webdriver.gecko.driver", Propertie.geckoDriverPath);
 
 		
 		ChromeOptions chromeOptions = new ChromeOptions();

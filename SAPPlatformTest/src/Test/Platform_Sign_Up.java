@@ -1,17 +1,12 @@
 package Test;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
-
 import PageObjects.ConfirmationPage;
 import PageObjects.HomePage;
 import PageObjects.RegistrationPage;
-import Utility.ExcelUtil;
-import Utility.ExtentTestNGITestListener;
 import Utility.RetryTest;
 import Utility.TestDataProvider;
 
@@ -25,7 +20,7 @@ public class Platform_Sign_Up extends TestBase
 
 	//Reads SignUp Form data from the excel and perform the test based on it
 	@Test(dataProvider = "data-provider-Test-Platform-SignUp", dataProviderClass = TestDataProvider.class, groups = {"functional"}, retryAnalyzer = RetryTest.class, description = "Test 1 - Testing Platform sign up with Excel Reader", enabled = true)
-	public void test_Platform_Sign_Up(String firstName, String lastName, String email, String password, String retypePasswd, String opAuth, String toutAuth) throws InterruptedException 
+	public void test1_Platform_Sign_Up(String firstName, String lastName, String email, String password, String retypePasswd, String opAuth, String toutAuth) throws InterruptedException 
 	{
 		System.out.println("*****Test Started - test_Platform_Sign_Up_With_Excel_Reader*****");
 		
@@ -91,8 +86,8 @@ public class Platform_Sign_Up extends TestBase
 	}
 	
 	//Verify the Label Name displayed on the SignUp page
-	@Test(groups = {"Acceptance"}, retryAnalyzer = RetryTest.class, description = "Test 2 - Testing the Registration form label names/elements presents", enabled = false)
-	public void test_Registration_Form_LabelText() throws InterruptedException
+	@Test(groups = {"Acceptance"}, retryAnalyzer = RetryTest.class, description = "Test 2 - Testing the Registration form label names/elements presents", enabled = true)
+	public void test2_Registration_Form_LabelText() throws InterruptedException
 	{
 		System.out.println("*****Test Started - test_Registration_LabelText_Matching*****");
 		
@@ -129,8 +124,8 @@ public class Platform_Sign_Up extends TestBase
 	}
 	
 	//Verify the Error Message displayed on the SignUp page
-	@Test(groups = {"Negative"}, retryAnalyzer = RetryTest.class, description = "Test3 - Testing the Registration Form Error Messages", enabled = false)
-	public void test_registration_Form_Error_Messages() throws InterruptedException
+	@Test(groups = {"Negative"}, retryAnalyzer = RetryTest.class, description = "Test3 - Testing the Registration Form Error Messages", enabled = true)
+	public void test3_registration_Form_Error_Messages() throws InterruptedException
 	{
 		System.out.println("*****Test Started - test_Registration_ErrorText_Matching*****");
 		
@@ -138,7 +133,7 @@ public class Platform_Sign_Up extends TestBase
 		
 		homePage.clickOnCookieOKButton();
 		homePage.clickOnSignUpButton();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		homePage.switchToIframe();
 		Thread.sleep(1000);
 		

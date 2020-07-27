@@ -1,7 +1,6 @@
 package Utility;
 
 import java.io.File;
-import Utility.Propertie;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -82,7 +81,7 @@ public class ExcelUtil
 		try
 		{
 			//FileInputStream file = new FileInputStream(new File("/Users/rajak/git/repository/SAPPlatformTest/src/resources/TestData.xlsx"));
-			FileInputStream file = new FileInputStream(new File("/Users/rajak/Downloads/Sumadhura Association/Sumadhura Maintenace Proposal/Maintenance Quote.xlsx"));
+			FileInputStream file = new FileInputStream(new File(Propertie.testData_filePath + Propertie.testData_FileName));
 			
 			XSSFWorkbook wb = new XSSFWorkbook(file);
 			
@@ -391,7 +390,7 @@ public class ExcelUtil
 	{
 		ExcelUtil excel = new ExcelUtil();
 		//String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-		//excel.readExcelFile("/Users/rajak/Downloads/Sumadhura Association/Sumadhura Maintenace Proposal/", "Maintenance Quote.xlsx", "Enliven");
+		//excel.readExcelFile("/Users/rajak/git/repository/SAPPlatformTest/src/resources/", "Math.xlsx", "");
 		//excel.writeExcelfile("/Users/rajak/Downloads/", "TestWrite.xlsx", "Sheet1", cars );
 		//excel.setExcelFile("/Users/rajak/Downloads/", "TestWrite.xlsx", "Sheet1");
 		excel.readExcelTestData("/Users/rajak/git/repository/SAPPlatformTest/src/resources/", "TestData.xlsx", "Sheet1");

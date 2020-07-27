@@ -6,10 +6,8 @@ import java.util.Date;
 
 import org.openqa.selenium.Cookie;
 import org.testng.ITestContext;
-import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -18,8 +16,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
-import Test.TestBase;
 
 /*
  * This Listener class has a methods to Listen the test event, report, log the test results based on the test results.
@@ -76,8 +72,6 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 		logger.log(Status.PASS, MarkupHelper.createLabel(testResult.getName(), ExtentColor.GREEN)); 
 		
 		cookie = new Cookie("zaleniumTestPassed", "true"); //sets test in zalenium dashboard as pass
-		
-		//excel.setCellData("PASS", rowNum, colNum);
 		    
 	}
 

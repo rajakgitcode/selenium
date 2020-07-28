@@ -34,9 +34,10 @@ public class ConfirmationPage extends TestBase {
 	WebElement closeButton;
 	@FindBy(xpath = "/html/body/footer/div/div/div/img")
 	WebElement logoImgBottom;
-	
+
 	public String getSuccessMessage() {
-		successMessageText = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(successMessageText));
+		successMessageText = new WebDriverWait(driver, Propertie.timeOutValue)
+				.until(ExpectedConditions.visibilityOf(successMessageText));
 		return successMessageText.getText();
 	}
 
@@ -45,7 +46,7 @@ public class ConfirmationPage extends TestBase {
 				.until(ExpectedConditions.visibilityOf(confirmationMailText));
 		return confirmationMailText.getText();
 	}
-	
+
 	public String getActivateText() {
 		confirmationMailText = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(activateText));
@@ -53,7 +54,8 @@ public class ConfirmationPage extends TestBase {
 	}
 
 	public void verifySuccessMessage() {
-		successMessageText = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.visibilityOf(successMessageText));
+		successMessageText = new WebDriverWait(driver, Propertie.timeOutValue)
+				.until(ExpectedConditions.visibilityOf(successMessageText));
 		softAssert.assertEquals(successMessageText.getText(), "Thank you for registering with SAP Conversational AI",
 				"Success Message Text Not Matching");
 	}
@@ -65,24 +67,25 @@ public class ConfirmationPage extends TestBase {
 				getConfirmationMail().contains("An e-mail with a link to activate your account has been sent to"),
 				"Confirmation Mail Text not matching/not received");
 	}
-	
+
 	public void verifyActivationText() {
 		activateText = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(activateText));
-		softAssert.assertEquals(activateText.getText(), "To activate your account, click the link contained in the e-mail. Note that it might take a few minutes for the e-mail to reach your inbox.","Activate Text NOT matching");
+		softAssert.assertEquals(activateText.getText(),
+				"To activate your account, click the link contained in the e-mail. Note that it might take a few minutes for the e-mail to reach your inbox.",
+				"Activate Text NOT matching");
 	}
-	
+
 	public void verifyLogoImage() {
 		logoImgBottom = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.visibilityOf(logoImgBottom));
-		softAssert.assertTrue(logoImgBottom.isDisplayed(), "Logo Image is missing in Bottom of confirmation Page" );
+		softAssert.assertTrue(logoImgBottom.isDisplayed(), "Logo Image is missing in Bottom of confirmation Page");
 	}
-	
-	public void clickOnCloseButton()
-	{
+
+	public void clickOnCloseButton() {
 		closeButton = new WebDriverWait(driver, Propertie.timeOutValue)
 				.until(ExpectedConditions.elementToBeClickable(closeButton));
 		closeButton.click();
 	}
-	
+
 }

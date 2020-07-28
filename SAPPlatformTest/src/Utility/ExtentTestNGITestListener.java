@@ -28,13 +28,12 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	ExcelUtil excel;
 
 	@Override
-	public synchronized void onStart(ITestContext context) 
-	{
+	public synchronized void onStart(ITestContext context) {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); // time stamp
 
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/test-output/ExtentReport" + "_" + timeStamp + ".html");
-		
+
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
 
 		report = new ExtentReports();
@@ -52,44 +51,40 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	}
 
 	@Override
-	public synchronized void onFinish(ITestContext context) 
-	{
+	public synchronized void onFinish(ITestContext context) {
 		report.flush();
 	}
 
 	@Override
-	public synchronized void onTestStart(ITestResult testResult) 
-	{
+	public synchronized void onTestStart(ITestResult testResult) {
 		// report.createTest(testResult.getName());
 		// logger.info("****Test Started****" + testResult.getName());
 
 	}
 
 	@Override
-	public synchronized void onTestSuccess(ITestResult testResult) 
-	{
+	public synchronized void onTestSuccess(ITestResult testResult) {
 		logger = report.createTest(testResult.getName()); // create new entry in the report
-		logger.log(Status.PASS, MarkupHelper.createLabel(testResult.getName(), ExtentColor.GREEN)); 
-		
-		cookie = new Cookie("zaleniumTestPassed", "true"); //sets test in zalenium dashboard as pass
-		    
+		logger.log(Status.PASS, MarkupHelper.createLabel(testResult.getName(), ExtentColor.GREEN));
+
+		cookie = new Cookie("zaleniumTestPassed", "true"); // sets test in zalenium dashboard as pass
+
 	}
 
 	@Override
-	public synchronized void onTestFailure(ITestResult testResult) 
-	{
+	public synchronized void onTestFailure(ITestResult testResult) {
 		logger = report.createTest(testResult.getName()); // create new entry in the report
-		logger.log(Status.FAIL, MarkupHelper.createLabel(testResult.getName(), ExtentColor.RED)); 
-		
-		cookie = new Cookie("zaleniumTestPassed", "false"); //sets test in zalenium dashboard as fail
-		
+		logger.log(Status.FAIL, MarkupHelper.createLabel(testResult.getName(), ExtentColor.RED));
+
+		cookie = new Cookie("zaleniumTestPassed", "false"); // sets test in zalenium dashboard as fail
+
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
 
 		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + testResult.getName() + "_"
 				+ timeStamp + ".jpg";
-		
-		logger.log(Status.DEBUG,  testResult.getThrowable().getMessage());
-		
+
+		logger.log(Status.DEBUG, testResult.getThrowable().getMessage());
+
 		try {
 			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(screenshotPath));
 		} catch (IOException e) {
@@ -98,11 +93,9 @@ public class ExtentTestNGITestListener extends TestListenerAdapter {
 	}
 
 	@Override
-	public synchronized void onTestSkipped(ITestResult testResult) 
-	{
+	public synchronized void onTestSkipped(ITestResult testResult) {
 		logger = report.createTest(testResult.getName()); // create new entry in the report
-		logger.log(Status.SKIP, MarkupHelper.createLabel(testResult.getName(), ExtentColor.ORANGE)); 
+		logger.log(Status.SKIP, MarkupHelper.createLabel(testResult.getName(), ExtentColor.ORANGE));
 	}
 
-	
 }

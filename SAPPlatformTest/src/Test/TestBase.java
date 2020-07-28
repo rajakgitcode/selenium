@@ -1,6 +1,5 @@
 package Test;
 
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -42,40 +41,36 @@ public class TestBase {
 	public WebDriver driver;
 
 	@BeforeMethod
-	public void initiateBrowser() throws MalformedURLException 
-	{
+	public void initiateBrowser() throws MalformedURLException {
 		System.setProperty("webdriver.chrome.driver", Propertie.chromeDriverPath);
 		System.setProperty("webdriver.gecko.driver", Propertie.geckoDriverPath);
 
-		
 		ChromeOptions chromeOptions = new ChromeOptions();
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
 		capabilities.setCapability(CapabilityType.PLATFORM_NAME, Platform.LINUX);
 		capabilities.setCapability("name", "PlatformSignUP");
 		capabilities.setCapability("build", "TestBuild");
-		
-		
-		//driver = new RemoteWebDriver(new URL(Propertie.remoteWebDriverURL), capabilities);
+
+		// driver = new RemoteWebDriver(new URL(Propertie.remoteWebDriverURL),
+		// capabilities);
 		driver = new ChromeDriver();
-		//driver = new FirefoxDriver();
+		// driver = new FirefoxDriver();
 		Reporter.log("*****Browser Session Started*****", true);
-		
+
 		driver.manage().window().maximize();
 
 		// Home Page
 		driver.get(Propertie.applicationURL);
-		
+
 		Reporter.log("*****Application Started*****", true);
 	}
-	
+
 	@AfterMethod
-	public void captureScreen(ITestResult result) throws IOException 
-	{
+	public void captureScreen(ITestResult result) throws IOException {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); // time stamp
-		
-		if (result.getStatus() == ITestResult.FAILURE) 
-		{
+
+		if (result.getStatus() == ITestResult.FAILURE) {
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File source = ts.getScreenshotAs(OutputType.FILE); // capture screenshot file
 			File target = new File(
@@ -86,13 +81,12 @@ public class TestBase {
 		}
 
 	}
-	
-	//To add test PASS/FAIL status cookie details to Zalenium dashboard
+
+	// To add test PASS/FAIL status cookie details to Zalenium dashboard
 	@AfterMethod
-	public void manageCookie()
-	{
+	public void manageCookie() {
 		driver.manage().addCookie(ExtentTestNGITestListener.cookie);
-		
+
 	}
 
 	@AfterMethod

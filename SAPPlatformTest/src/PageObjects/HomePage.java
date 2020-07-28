@@ -29,30 +29,30 @@ public class HomePage extends TestBase {
 	WebElement signUpButton;
 	@FindBy(xpath = "//iframe[@id='IDS_UI_Window']")
 	WebElement iFrame;
-	
 
 	public String getPageTitle() {
 		return driver.getTitle();
 	}
 
 	public void clickOnCookieOKButton() {
-		cookieOKButton = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(cookieOKButton));
+		cookieOKButton = new WebDriverWait(driver, Propertie.timeOutValue)
+				.until(ExpectedConditions.elementToBeClickable(cookieOKButton));
 		cookieOKButton.click();
 
 	}
 
 	public void clickOnSignUpButton() {
-		signUpButton = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(signUpButton));
+		signUpButton = new WebDriverWait(driver, Propertie.timeOutValue)
+				.until(ExpectedConditions.elementToBeClickable(signUpButton));
 		signUpButton.click();
 	}
 
 	public void switchToIframe() {
-		
-		driver = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iFrame));
-		//driver.switchTo().frame(0);
-		
-		
+
+		driver = new WebDriverWait(driver, Propertie.timeOutValue)
+				.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iFrame));
+		// driver.switchTo().frame(0);
+
 	}
 
-	
 }

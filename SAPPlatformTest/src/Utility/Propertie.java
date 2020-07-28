@@ -20,7 +20,7 @@ public class Propertie
 	//Enter Test Data Sheet Name
 	public static final String testData_sheetName = "Sheet1";
 	//Enter selenium wait TimeOutvalue
-	public static final int timeOutValue = 30;
+	public static final int timeOutValue = 20;
 	//Enter Maximum Retry on Test Failure
 	public static final int maxRetryCount = 0;
 	

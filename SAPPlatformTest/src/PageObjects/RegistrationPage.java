@@ -29,7 +29,7 @@ public class RegistrationPage extends TestBase {
 	@FindBy(xpath = "//*[@id=\"lastName\"]")
 	WebElement lastName;
 	@FindBy(xpath = "//*[@id=\"mail\"]")
-	public WebElement mail;
+	WebElement mail;
 	@FindBy(xpath = "//*[@id=\"newPasswordInput\"]")
 	WebElement newPassword;
 	@FindBy(xpath = "//*[@id=\"retypeNewPasswordInput\"]")
@@ -40,47 +40,47 @@ public class RegistrationPage extends TestBase {
 	WebElement touAccept;
 	@FindBy(xpath = "//*[@id=\"sapStoreRegisterFormSubmit\"]")
 	public WebElement registerButton;
-	@FindBy(xpath = "/html/body/main/div/div/h1")
+	@FindBy(xpath = "//*[@id='ids-heading-1']")
 	WebElement registrationTitle;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/h2")
+	@FindBy(xpath = "//fieldset/h2[text() = 'Tell Us About Yourself']")
 	WebElement tellUsAboutYourselfTitle;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[2]/h2")
+	@FindBy(xpath = "//fieldset/h2[text() = 'Set Password']")
 	WebElement setPasswordTitle;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[3]/h2")
+	@FindBy(xpath = "//fieldset/h2[text() = 'Terms and Conditions']")
 	WebElement termsAndConditionsTitle;
 	@FindBy(xpath = "/html/body/a")
 	WebElement closeButton;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[1]/div[1]/span/label")
+	@FindBy(xpath = "//label[@for = 'firstName']")
 	WebElement firstNameLabel;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[1]/div[1]/span/label")
+	@FindBy(xpath = "//label[@for = 'lastName']")
 	WebElement lastNameLabel;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[1]/div[1]/span/label")
+	@FindBy(xpath = "//label[@for = 'mail']")
 	WebElement emailLabel;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[1]/div[1]/span/label")
+	@FindBy(xpath = "//label[@for = 'newPasswordInput']")
 	WebElement passwordLabel;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[1]/div[1]/span/label")
+	@FindBy(xpath = "//label[@for = 'retypeNewPasswordInput']")
 	WebElement retypeLabel;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[3]/div[1]/div/ul/li/span[2]/span/label")
+	@FindBy(xpath = "//label[@for = 'pdAccept']")
 	WebElement termsLabel1;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[3]/div[2]/div/ul/li/span[2]/span/label")
+	@FindBy(xpath = "//label[@for = 'touAccept']")
 	WebElement termsLabel2;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[1]/div[2]/p")
+	@FindBy(xpath = "//div/p[@id = 'firstName.errors']")
 	WebElement firstNameError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[2]/div[1]/div[2]/p")
+	@FindBy(xpath = "//div/p[@id = 'lastName.errors']")
 	WebElement lastNameError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[1]/div[4]/div/div[2]/p")
+	@FindBy(xpath = "//div/p[@id = 'mail.errors']")
 	WebElement emailError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[3]/div[1]/div/p")
-	WebElement pdAcceptError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[3]/div[2]/div/p")
-	WebElement toutAcceptError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[2]/div[1]/div[2]/p")
+	@FindBy(xpath = "//div/p[@id = 'password.errors']")
 	WebElement passwordError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/fieldset[2]/div[2]/div[2]/p")
+	@FindBy(xpath = "//div/p[@id = 'passwordConfirm.errors']")
 	WebElement retypeError;
-	@FindBy(xpath = "/html/body/main/div/div/form/div[2]/div/div")
+	@FindBy(xpath = "//div/p[@id = 'pdAccept.errors']")
+	WebElement pdAcceptError;
+	@FindBy(xpath = "//div/p[@id = 'touAccept.errors']")
+	WebElement toutAcceptError;
+	@FindBy(xpath = "//div[text() = 'Required']")
 	WebElement requiredLabel;
-	@FindBy(xpath = "/html/body/footer/div/div/div/img")
+	@FindBy(xpath = "//img[@alt = 'Tenant logo']")
 	WebElement logoImgBottom;
 	
 	

@@ -5,13 +5,13 @@
     <classes>
       <class name="Test.Platform_Sign_Up">
         <methods>
+          <include name="test3_registration_Form_Error_Messages"/>
           <include name="initiateBrowser"/>
-          <include name="test_Platform_Sign_Up" invocation-numbers="0 0 0 1 1 1"/>
+          <include name="test1_Platform_Sign_Up" invocation-numbers="0 1"/>
           <include name="manageCookie"/>
-          <include name="test_Registration_Form_LabelText"/>
           <include name="captureScreen"/>
           <include name="quitBrowser"/>
-          <include name="test_registration_Form_Error_Messages"/>
+          <include name="test2_Registration_Form_LabelText"/>
         </methods>
       </class> <!-- Test.Platform_Sign_Up -->
     </classes>

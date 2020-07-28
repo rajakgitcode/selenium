@@ -27,7 +27,7 @@ public class HomePage extends TestBase {
 	WebElement cookieOKButton;
 	@FindBy(css = ".sap-btn-action > div:nth-child(1)")
 	WebElement signUpButton;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/iframe[1]")
+	@FindBy(xpath = "//iframe[@id='IDS_UI_Window']")
 	WebElement iFrame;
 	
 
@@ -48,8 +48,8 @@ public class HomePage extends TestBase {
 
 	public void switchToIframe() {
 		
-		iFrame = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.elementToBeClickable(iFrame));
-		driver.switchTo().frame(0);
+		driver = new WebDriverWait(driver, Propertie.timeOutValue).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iFrame));
+		//driver.switchTo().frame(0);
 		
 		
 	}

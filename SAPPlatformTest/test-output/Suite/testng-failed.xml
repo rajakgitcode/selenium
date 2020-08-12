@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Utility.ExtentTestNGITestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Test.Platform_Sign_Up">
+        <methods>
+          <include name="test_Registration_LabelText_Matching"/>
+          <include name="test_Platform_Sign_Up_With_Excel_Reader"/>
+          <include name="initiateBrowser"/>
+          <include name="test_Platform_Sign_Up"/>
+          <include name="test_Registartion_Error_Messages"/>
+          <include name="manageCookie"/>
+          <include name="captureScreen"/>
+          <include name="quitBrowser"/>
+        </methods>
+      </class> <!-- Test.Platform_Sign_Up -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

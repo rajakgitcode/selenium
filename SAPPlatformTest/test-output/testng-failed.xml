@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PlatformTestSuite]">
+  <listeners>
+    <listener class-name="Utility.ExtentTestNGITestListener"/>
+  </listeners>
+  <test name="Platform_Sign_Up(failed)">
+    <classes>
+      <class name="Test.Platform_Sign_Up">
+        <methods>
+          <include name="test3_registration_Form_Error_Messages"/>
+          <include name="initiateBrowser"/>
+          <include name="test1_Platform_Sign_Up" invocation-numbers="0"/>
+          <include name="manageCookie"/>
+          <include name="captureScreen"/>
+          <include name="test2_Registration_Form_LabelText"/>
+        </methods>
+      </class> <!-- Test.Platform_Sign_Up -->
+    </classes>
+  </test> <!-- Platform_Sign_Up(failed) -->
+</suite> <!-- Failed suite [PlatformTestSuite] -->

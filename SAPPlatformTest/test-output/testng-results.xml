@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+    <line>
+      <![CDATA[*****Browser Session Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Application Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Ended*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Application Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Ended*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Application Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Ended*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Application Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Ended*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Application Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Ended*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Application Started*****]]>
+    </line>
+    <line>
+      <![CDATA[*****Browser Session Ended*****]]>
+    </line>
+  </reporter-output>
+  <suite name="PlatformTestSuite" duration-ms="72319" started-at="2020-07-28T05:58:32Z" finished-at="2020-07-28T05:59:44Z">
+    <groups>
+      <group name="functional">
+        <method signature="Platform_Sign_Up.test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test1_Platform_Sign_Up" class="Test.Platform_Sign_Up"/>
+      </group> <!-- functional -->
+      <group name="Acceptance">
+        <method signature="Platform_Sign_Up.test2_Registration_Form_LabelText()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test2_Registration_Form_LabelText" class="Test.Platform_Sign_Up"/>
+      </group> <!-- Acceptance -->
+      <group name="Negative">
+        <method signature="Platform_Sign_Up.test3_registration_Form_Error_Messages()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test3_registration_Form_Error_Messages" class="Test.Platform_Sign_Up"/>
+      </group> <!-- Negative -->
+    </groups>
+    <test name="Platform_Sign_Up" duration-ms="72319" started-at="2020-07-28T05:58:32Z" finished-at="2020-07-28T05:59:44Z">
+      <class name="Test.Platform_Sign_Up">
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="initiateBrowser" is-config="true" duration-ms="5906" started-at="2020-07-28T11:28:33Z" finished-at="2020-07-28T11:28:39Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Started*****]]>
+            </line>
+            <line>
+              <![CDATA[*****Application Started*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initiateBrowser -->
+        <test-method status="PASS" signature="test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test1_Platform_Sign_Up" duration-ms="7765" started-at="2020-07-28T11:28:39Z" description="Test 1 - Testing Platform sign up with Excel Reader" data-provider="data-provider-Test-Platform-SignUp" finished-at="2020-07-28T11:28:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AAAA1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBBB1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AAAA1@yahoo.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1_Platform_Sign_Up -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="captureScreen" is-config="true" duration-ms="2" started-at="2020-07-28T11:28:47Z" finished-at="2020-07-28T11:28:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1_Platform_Sign_Up status=SUCCESS method=Platform_Sign_Up.test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="manageCookie()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="manageCookie" is-config="true" duration-ms="11" started-at="2020-07-28T11:28:47Z" finished-at="2020-07-28T11:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCookie -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="quitBrowser" is-config="true" duration-ms="157" started-at="2020-07-28T11:28:47Z" finished-at="2020-07-28T11:28:47Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Ended*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="initiateBrowser" is-config="true" duration-ms="5297" started-at="2020-07-28T11:28:47Z" finished-at="2020-07-28T11:28:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Started*****]]>
+            </line>
+            <line>
+              <![CDATA[*****Application Started*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initiateBrowser -->
+        <test-method status="PASS" signature="test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test1_Platform_Sign_Up" duration-ms="6801" started-at="2020-07-28T11:28:52Z" description="Test 1 - Testing Platform sign up with Excel Reader" data-provider="data-provider-Test-Platform-SignUp" finished-at="2020-07-28T11:28:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AAAA2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBBB2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AAAA2@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1_Platform_Sign_Up -->
+        <test-method status="PASS" signature="manageCookie()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="manageCookie" is-config="true" duration-ms="11" started-at="2020-07-28T11:28:59Z" finished-at="2020-07-28T11:28:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCookie -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="captureScreen" is-config="true" duration-ms="0" started-at="2020-07-28T11:28:59Z" finished-at="2020-07-28T11:28:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1_Platform_Sign_Up status=SUCCESS method=Platform_Sign_Up.test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="quitBrowser" is-config="true" duration-ms="185" started-at="2020-07-28T11:28:59Z" finished-at="2020-07-28T11:28:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Ended*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="initiateBrowser" is-config="true" duration-ms="4505" started-at="2020-07-28T11:28:59Z" finished-at="2020-07-28T11:29:04Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Started*****]]>
+            </line>
+            <line>
+              <![CDATA[*****Application Started*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initiateBrowser -->
+        <test-method status="PASS" signature="test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test1_Platform_Sign_Up" duration-ms="7276" started-at="2020-07-28T11:29:04Z" description="Test 1 - Testing Platform sign up with Excel Reader" data-provider="data-provider-Test-Platform-SignUp" finished-at="2020-07-28T11:29:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AAAA3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBBB3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AAAA3@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1_Platform_Sign_Up -->
+        <test-method status="PASS" signature="manageCookie()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="manageCookie" is-config="true" duration-ms="9" started-at="2020-07-28T11:29:11Z" finished-at="2020-07-28T11:29:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCookie -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="captureScreen" is-config="true" duration-ms="0" started-at="2020-07-28T11:29:11Z" finished-at="2020-07-28T11:29:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1_Platform_Sign_Up status=SUCCESS method=Platform_Sign_Up.test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="quitBrowser" is-config="true" duration-ms="220" started-at="2020-07-28T11:29:11Z" finished-at="2020-07-28T11:29:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Ended*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="initiateBrowser" is-config="true" duration-ms="4495" started-at="2020-07-28T11:29:11Z" finished-at="2020-07-28T11:29:16Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Started*****]]>
+            </line>
+            <line>
+              <![CDATA[*****Application Started*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initiateBrowser -->
+        <test-method status="PASS" signature="test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test1_Platform_Sign_Up" duration-ms="6876" started-at="2020-07-28T11:29:16Z" description="Test 1 - Testing Platform sign up with Excel Reader" data-provider="data-provider-Test-Platform-SignUp" finished-at="2020-07-28T11:29:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AAAA4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBBB4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AAAA4@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123@Plmn]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1_Platform_Sign_Up -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="captureScreen" is-config="true" duration-ms="0" started-at="2020-07-28T11:29:22Z" finished-at="2020-07-28T11:29:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1_Platform_Sign_Up status=SUCCESS method=Platform_Sign_Up.test1_Platform_Sign_Up(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Platform_Sign_Up@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="manageCookie()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="manageCookie" is-config="true" duration-ms="14" started-at="2020-07-28T11:29:22Z" finished-at="2020-07-28T11:29:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCookie -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="quitBrowser" is-config="true" duration-ms="165" started-at="2020-07-28T11:29:22Z" finished-at="2020-07-28T11:29:23Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Ended*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="initiateBrowser" is-config="true" duration-ms="4967" started-at="2020-07-28T11:29:23Z" finished-at="2020-07-28T11:29:28Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Started*****]]>
+            </line>
+            <line>
+              <![CDATA[*****Application Started*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initiateBrowser -->
+        <test-method status="PASS" signature="test2_Registration_Form_LabelText()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test2_Registration_Form_LabelText" duration-ms="4143" started-at="2020-07-28T11:29:28Z" description="Test 2 - Testing the Registration form label names/elements presents" finished-at="2020-07-28T11:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2_Registration_Form_LabelText -->
+        <test-method status="PASS" signature="manageCookie()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="manageCookie" is-config="true" duration-ms="16" started-at="2020-07-28T11:29:32Z" finished-at="2020-07-28T11:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCookie -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="captureScreen" is-config="true" duration-ms="0" started-at="2020-07-28T11:29:32Z" finished-at="2020-07-28T11:29:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test2_Registration_Form_LabelText status=SUCCESS method=Platform_Sign_Up.test2_Registration_Form_LabelText()[pri:0, instance:Test.Platform_Sign_Up@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="quitBrowser" is-config="true" duration-ms="184" started-at="2020-07-28T11:29:32Z" finished-at="2020-07-28T11:29:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Ended*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="initiateBrowser" is-config="true" duration-ms="4409" started-at="2020-07-28T11:29:32Z" finished-at="2020-07-28T11:29:36Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Started*****]]>
+            </line>
+            <line>
+              <![CDATA[*****Application Started*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initiateBrowser -->
+        <test-method status="PASS" signature="test3_registration_Form_Error_Messages()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="test3_registration_Form_Error_Messages" duration-ms="7743" started-at="2020-07-28T11:29:36Z" description="Test3 - Testing the Registration Form Error Messages" finished-at="2020-07-28T11:29:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3_registration_Form_Error_Messages -->
+        <test-method status="PASS" signature="manageCookie()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="manageCookie" is-config="true" duration-ms="13" started-at="2020-07-28T11:29:44Z" finished-at="2020-07-28T11:29:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageCookie -->
+        <test-method status="PASS" signature="captureScreen(org.testng.ITestResult)[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="captureScreen" is-config="true" duration-ms="0" started-at="2020-07-28T11:29:44Z" finished-at="2020-07-28T11:29:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test3_registration_Form_Error_Messages status=SUCCESS method=Platform_Sign_Up.test3_registration_Form_Error_Messages()[pri:0, instance:Test.Platform_Sign_Up@457e2f02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreen -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:Test.Platform_Sign_Up@457e2f02]" name="quitBrowser" is-config="true" duration-ms="173" started-at="2020-07-28T11:29:44Z" finished-at="2020-07-28T11:29:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[*****Browser Session Ended*****]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- Test.Platform_Sign_Up -->
+    </test> <!-- Platform_Sign_Up -->
+  </suite> <!-- PlatformTestSuite -->
+</testng-results>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PlatformTestSuite">
+<listeners>
+		<listener class-name="Utility.ExtentTestNGITestListener" />
+</listeners>
+
+  <test name="Platform_Sign_Up">
+    <classes>
+      <class name="Test.TestBase"/>
+      <class name="Test.Platform_Sign_Up"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

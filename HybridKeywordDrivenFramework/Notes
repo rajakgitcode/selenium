@@ -1,0 +1,6 @@
+Create a Keyword Action Class with all the action keyword methods/user actions/steps user doing on the page.
+Create a Test Excel with Test Case Name/ID, Test Step ID, Descriptions, ActionKeywords which user is performing on the page to complete the Test.
+Create a Excel Utility to Read the excel
+Create a Test Class/Driver Class/Execution Engine to perform the test steps by reading the excel action keyword column
+The only idea behind the Keyword Driven framework is to accept the action keywords from the Excel, so that all the test cases can be easily created in Excel file.
+Refection Classes - Reflection is a very useful approach to deal with the Java class at runtime as it can be used to load the Java class, call its methods or analysis the class at runtime.

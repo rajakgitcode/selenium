@@ -10,8 +10,8 @@ public class DataProviderClass
 	public Object[][] dpMethod(String filePath, String fileName, String sheetName) throws IOException
 	{
 		ExcelUtil excel = new ExcelUtil();
-		excel.setExcelFile(Propertie.testData_filePath, Propertie.testData_FileName, Propertie.testData_sheetName);
-		return excel.readExcelTestData(Propertie.testData_filePath, Propertie.testData_FileName, Propertie.testData_sheetName);
+		excel.setExcelFile(Propertie.testExcel_filePath, Propertie.testExcel_FileName, Propertie.testExcel_TestCase_sheetName);
+		return excel.readExcelTestData(Propertie.testExcel_filePath, Propertie.testExcel_FileName, Propertie.testExcel_TestCase_sheetName);
 	}
 
 }

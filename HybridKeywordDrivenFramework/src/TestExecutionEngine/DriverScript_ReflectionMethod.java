@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.testng.log4testng.Logger;
 
 import KeywordActionLibrary.KeywordAction;
 import KeywordActionLibrary.KeywordAction2;
@@ -18,7 +19,7 @@ public class DriverScript_ReflectionMethod
 	public static KeywordAction2 keywordActions;
 	public static String actionKeyword;
 	public static Method methods[];
-	
+	private static Logger log = Logger.getLogger(DriverScript_ReflectionMethod.class);
 	
 	public void runReflectionMethod(String strClassName, String strMethodName, Object... inputArgs) 
 	{
@@ -39,7 +40,9 @@ public class DriverScript_ReflectionMethod
 			Object _instance = cls.newInstance();
 			
 			Method method = cls.getDeclaredMethod(strMethodName, params);
+			
 			System.out.println(method);
+			
 			method.invoke(_instance, inputArgs);
 
 		} catch (ClassNotFoundException e) {
@@ -64,11 +67,13 @@ public class DriverScript_ReflectionMethod
 	public static void main(String[] args) throws Exception
 	{
 		DOMConfigurator.configure("log4j.xml");
-		ExcelUtil.setExcelFile(Propertie.testData_filePath, Propertie.testData_FileName, Propertie.testData_sheetName);
+		
+		ExcelUtil.setExcelFile(Propertie.testExcel_filePath, Propertie.testExcel_FileName, Propertie.testExcel_TestCase_sheetName);
 		
 		DriverScript_ReflectionMethod startEngine = new DriverScript_ReflectionMethod();
 		
 		System.out.println(ExcelUtil.getRowCount());
+		
 		for(int iRow=1; iRow<=ExcelUtil.getRowCount()-1; iRow++)
 		{
 			List<Object> paramList = new ArrayList<Object>();
@@ -84,6 +89,7 @@ public class DriverScript_ReflectionMethod
 			}
 
 			Object[] paramListObject = new String[paramList.size()];
+		
 			paramListObject = paramList.toArray(paramListObject);
 
 			startEngine.runReflectionMethod("KeywordActionLibrary.KeywordAction2", methodName, paramListObject);

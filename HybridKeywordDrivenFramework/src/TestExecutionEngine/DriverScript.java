@@ -14,7 +14,7 @@ public class DriverScript
 		
 		//KeywordAction KeywordAction = new KeywordAction();
 		
-		ExcelUtil.setExcelFile(Propertie.testData_filePath, Propertie.testData_FileName, Propertie.testData_sheetName);
+		ExcelUtil.setExcelFile(Propertie.testExcel_filePath, Propertie.testExcel_FileName, Propertie.testExcel_TestCase_sheetName);
 		
 		for(int iRow=1; iRow <= ExcelUtil.getRowCount()-1; iRow++)
 		{
